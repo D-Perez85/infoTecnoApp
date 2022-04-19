@@ -1,0 +1,230 @@
+.button {
+   cursor: pointer;
+   border: none;
+   border-radius: 20px;
+   background-color: transparent;
+   color: rgb(68, 68, 68);
+   padding: 7px;
+}
+.button:hover {
+   background-color: rgb(231, 229, 229);
+}
+
+.button10 {
+   cursor: pointer;
+   border: none;
+   border-radius: 15px;
+   background-color: rgb(0, 0, 0);
+   color: white;
+   padding: 4px;
+}
+.button10:hover {
+   background-color: rgb(0, 0, 0);
+   color: rgb(103, 216, 127);
+}
+
+$background: #efefef;
+$lfs-blue: #141414;
+$lfs-yellow: #000000;
+$lfs-yellow1: #474747;
+$lfs-grey: #606264;
+
+.th_luz {
+   width: 3% !important;
+}
+
+.th_nlinea {
+   width: 15% !important;
+}
+.th_cargo {
+   width: 30% !important;
+}
+
+.th_plan {
+   width: 60% !important;
+}
+
+.th_estado {
+   width: 10% !important;
+}
+.th_opciones {
+   width: 19% !important;
+}
+
+.table1 {
+   width: 100%;
+   border: 0px;
+
+   .tdg {
+      color: green;
+   }
+   .tdo {
+      color: orange;
+   }
+
+   caption {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $lfs-yellow;
+      text-align: center;
+   }
+   thead {
+      border-top: 1px solid $lfs-yellow;
+      border-bottom: 1px solid $lfs-yellow;
+      th {
+         text-transform: uppercase;
+         text-align: center;
+         padding: 5px;
+         color: #fcfcfc;
+         background-color: #606264;
+         border: 1px solid #f1f1f1;
+      }
+   }
+   tbody {
+      tr {
+         border-bottom: 1px solid #f1f1f1;
+         color: $lfs-grey;
+         td {
+            padding: 5px;
+            border: 0px solid #f1f1f1;
+            text-align: center;
+         }
+         th {
+            padding-left: 4px;
+            border: 0px solid #f1f1f1;
+         }
+      }
+      tr:hover {
+         background-color: rgb(247, 244, 244);
+      }
+   }
+   tfoot {
+      color: $lfs-yellow;
+      font-style: italic;
+      border-bottom: 0px solid $lfs-yellow;
+      tr {
+         td {
+            padding: 5px;
+            border: 1px solid #f1f1f1;
+         }
+      }
+   }
+}
+
+.table2 {
+   width: 70%;
+   border: 0px;
+   caption {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $lfs-yellow;
+      text-align: center;
+   }
+   thead {
+      border-top: 1px solid $lfs-yellow;
+      border-bottom: 1px solid $lfs-yellow;
+      th {
+         text-transform: uppercase;
+         text-align: center;
+         padding: 5px;
+         color: #fcfcfc;
+         background-color: #606264;
+         border: 1px solid #f1f1f1;
+      }
+   }
+   tbody {
+      tr {
+         border-bottom: 1px solid #f1f1f1;
+         color: $lfs-grey;
+         td {
+            padding: 5px;
+            border: 0px solid #f1f1f1;
+            text-align: center;
+         }
+         th {
+            padding-left: 4px;
+            border: 0px solid #f1f1f1;
+         }
+      }
+      tr:hover {
+         background-color: rgb(247, 244, 244);
+      }
+   }
+   tfoot {
+      color: $lfs-yellow;
+      font-style: italic;
+      border-bottom: 0px solid $lfs-yellow;
+      tr {
+         td {
+            padding: 5px;
+            border: 1px solid #f1f1f1;
+         }
+      }
+   }
+}
+
+.table_modal {
+   width: 100%;
+   border: 0px;
+
+   .tr1 {
+      font-size: 10px;
+      font-style: oblique;
+   }
+   .tr2 {
+      font-size: 10px;
+      background-color: rgb(200, 252, 200);
+      font-weight: bold;
+   }
+
+   caption {
+      text-transform: uppercase;
+      color: $lfs-yellow1;
+      text-align: center;
+      padding: 2px;
+   }
+   thead {
+      border-top: 1px solid $lfs-yellow1;
+      border-bottom: 1px solid $lfs-yellow1;
+      th {
+         font-size: 10px;
+         text-transform: uppercase;
+         text-align: center;
+         padding: 2px;
+         color: #fcfcfc;
+         background-color: #606264;
+         border: 1px solid #f1f1f1;
+      }
+   }
+   tbody {
+      tr {
+         border-bottom: 1px solid #f1f1f1;
+         color: $lfs-grey;
+         font-size: 9px;
+         td {
+            font-size: 10px;
+            padding: 4px;
+            border: 0px solid #f1f1f1;
+            text-align: center;
+         }
+         th {
+            padding-left: 3px;
+            border: 0px solid #f1f1f1;
+         }
+      }
+      tr:hover {
+         background-color: rgb(247, 244, 244);
+      }
+   }
+   tfoot {
+      color: $lfs-yellow;
+      font-style: italic;
+      border-bottom: 0px solid $lfs-yellow;
+      tr {
+         td {
+            padding: 5px;
+            border: 1px solid #f1f1f1;
+         }
+      }
+   }
+}

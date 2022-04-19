@@ -1,0 +1,83 @@
+import {Box, FormControlLabel, Modal, Stack, Switch, TextField} from '@mui/material'
+
+import {Field, Form, Formik, validateYupSchema} from 'formik'
+
+import React from 'react'
+import {Ilinea2, Ilineas2} from '../../interfaces/lineas-interfaces'
+import {agrePerCarg} from '../../services/telefonia'
+
+type stateModel = {
+   modelState: boolean
+   handleClose: () => void
+   objet?: Ilineas2
+}
+
+const style = {
+   position: 'absolute',
+   top: '50%',
+   left: '50%',
+   transform: 'translate(-50%, -50%)',
+   width: 600,
+
+   bgcolor: 'background.paper',
+   border: '2px solid #000',
+   boxShadow: 35,
+   p: 4,
+}
+
+const BasicModal: React.FC<stateModel> = ({modelState, handleClose, objet}) => {
+   return (
+      <div>
+         <Modal
+            open={modelState}
+            onClose={(_, reason) => {
+               if (reason !== 'backdropClick') {
+                  handleClose()
+               }
+            }}
+            aria-labelledby='modal-modal-title'
+            aria-describedby='modal-modal-description'
+         >
+            <Box sx={style}>
+               <button className='buttonCreate-close ' onClick={handleClose}>
+                  X
+               </button>
+
+               <h6>Nuevo Cargo</h6>
+
+               <Formik
+                  initialValues={objet!}
+                  onSubmit={(values) => {
+                     onsubmit
+                  }}
+                  //   validate={(valores) => {
+                  //      return validateForm(valores)
+                  //   }}
+               >
+                  {({values, errors, touched, handleChange, handleSubmit, handleBlur}) => (
+                     <form onSubmit={() => agrePerCarg(values)}>
+                        <div className='prueba'>
+                           <TextField
+                              type='text'
+                              id='dni'
+                              name='dni'
+                              className='TextField'
+                              variant='standard'
+                              label='DNI'
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                           />
+                        </div>
+                        <button className='' type='submit'>
+                           Guardar
+                        </button>
+                     </form>
+                  )}
+               </Formik>
+            </Box>
+         </Modal>
+      </div>
+   )
+}
+
+export default BasicModal

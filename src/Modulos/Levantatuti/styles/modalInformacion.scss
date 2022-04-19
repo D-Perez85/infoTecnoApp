@@ -1,0 +1,57 @@
+
+.tituloModatInfo{
+padding-top: 8px;
+font-size: 24px;
+float: left;
+}
+.conten-info{
+    padding-top: 50px;
+}
+
+.modal-container{
+    width: 650px;
+    height: auto;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .05);
+}
+
+.buttonCreate-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, .5);
+  color: black;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s;  
+}
+
+.buttonCreate-close:hover{
+    border:  1px solid rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+}
+
+.separador{
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    margin: 30px 0px 40px 0px;
+}
+
+.text-titulo{
+    font-size: 18px;
+    padding: 5px;
+
+}
+
+.text-cuerpo{
+    width:350px;
+    height:50px;
+    font-size:10pt;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,43 @@
+.imagenSubida {
+   max-height: 160px;
+   height: 160px;
+   min-width: 100%;
+   max-width: 300px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.file-select {
+   position: relative;
+   max-width: 300px;
+}
+
+.tituloModatInfo {
+   text-align: center;
+}
+
+.file-select::before {
+   background-color: #5678ef;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 3px;
+   content: 'Seleccionar Imagen'; /* testo por defecto */
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+}
+
+.btnSubir {
+   margin-top: 10px;
+   float: right;
+   width: 100px;
+}
+
+.gridImagenes {
+   display: grid;
+   grid-template-rows: 5fr 1fr 5fr 1fr;
+}

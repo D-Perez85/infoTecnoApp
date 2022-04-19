@@ -1,0 +1,66 @@
+.input_cargo {
+   width: 48%;
+   align-items: 'center';
+   margin: 5px !important;
+}
+
+.input_buscar {
+   width: 20%;
+   margin: 5px !important;
+   float: right !important;
+}
+
+.input_hidden {
+   display: none !important;
+}
+
+.input_cargo_fecha {
+   width: 48%;
+   align-items: 'center' !important;
+   margin: 21px 5px 5px !important;
+}
+
+.container1 {
+   text-align: center;
+}
+
+.button1 {
+   background-color: rgb(14, 133, 14) !important;
+   color: white !important;
+   align-content: center !important;
+}
+
+.button1:hover {
+   background-color: rgb(0, 0, 0) !important;
+   color: rgb(14, 133, 14) !important;
+   align-items: center !important;
+   font-weight: bold;
+}
+
+.button2 {
+   background-color: #606264 !important;
+   color: white !important;
+   align-content: center !important;
+   border-radius: 100%;
+}
+
+.button2:hover {
+   background-color: rgb(0, 0, 0) !important;
+   color: rgb(255, 255, 255) !important;
+   align-items: center !important;
+   font-weight: bold;
+}
+
+.select {
+   width: 48% !important;
+   font-size: 16px !important;
+   margin: 21px 2px 2px !important;
+}
+
+.select_lebel {
+   width: 48% !important;
+   text-align: left;
+   font-size: 12px !important;
+   padding: 10px 10px 10px 10px !important;
+   margin: 10px 2px 2px !important;
+}
