@@ -1,5 +1,4 @@
 import { Box, Modal, Container} from '@mui/material'
-import '../../styles/modalInformacion.scss'
 import React from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import {Inoticia} from '../../interfaces/noticias-interfaces'
@@ -19,7 +18,6 @@ const style = {
    bgcolor: 'background.paper',
    border: '2px solid #000',
    boxShadow: 24,
-  
    p: 4,
 }
 
@@ -52,16 +50,13 @@ const ModalInformacion: React.FC<stateModel> = ({modelStateInfo, handleCloseInfo
                         <p>Tematicas: {objetInfo?.tematicas}</p>
                         <p>Autor: {objetInfo?.datos_autor.nombre} {objetInfo?.datos_autor.apellido}</p>
                         <p>{objetInfo?.datos_autor.email}</p>
-                        
                         <p>Likes: {objetInfo?.likes} Visitas: {objetInfo?.visitas}</p>
                         <p>Creador: {objetInfo?.usuario_creador.nombre}</p>
                         </div>
-                           
                </Box>
             </Container>
          </Modal>
       </div>
    )
 }
-
-export default ModalInformacion
+export default ModalInformacion; 

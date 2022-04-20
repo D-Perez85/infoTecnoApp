@@ -1,5 +1,4 @@
 import {Box, Modal} from '@mui/material'
-import '../../styles/modalEstado.scss'
 import {patchBajarNoticia, patchAltaNoticia} from '../../servicios/Noticias-Services'
 import React from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
@@ -97,5 +96,4 @@ const ModalEstado: React.FC<stateModel> = ({
       </div>
    )
 }
-
-export default ModalEstado
+export default ModalEstado; 

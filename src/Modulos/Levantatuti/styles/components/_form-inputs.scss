@@ -1,0 +1,71 @@
+.formInputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+ }
+ 
+ .inputTitulo {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    min-width: 100%;
+ }
+ 
+ .inputTags {
+    grid-column: 1 / 2;
+    grid-row: 2;
+ }
+ 
+ .inputTematica {
+    grid-column: 2 / 3;
+    grid-row: 2;
+ }
+ 
+ .inputNombreAutor {
+    grid-column: 1 / 2;
+    grid-row: 3;
+ }
+ .inputApellidoAutor {
+    grid-column: 2 / 3;
+    grid-row: 3;
+ }
+ .inputEmailAutor {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    min-width: 100%;
+ }
+ 
+ .inputCuerpo {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    max-height: 100%;
+    margin-bottom: 20px;
+ }
+ .checkPubli {
+    grid-column: 1 / 2;
+    grid-row: 4;
+ }
+ 
+ .checkBaja {
+    grid-column: 1 / 2;
+    grid-row: 5;
+ }
+ .inputfechaDePublicacion {
+    grid-column: 2 / 2;
+    grid-row: 4;
+    max-height: 100%;
+ }
+ .inputfechaDeBaja {
+    grid-column: 2 / 3;
+    grid-row: 5;
+    max-height: 100%;
+ }
+ 
+ .inputButton {
+    grid-column: 1/3;
+    grid-row: 6;
+    background-color: $green;
+    width: 60%;
+    margin: auto;
+    border-radius: 5px;
+    color: $white;
+ }

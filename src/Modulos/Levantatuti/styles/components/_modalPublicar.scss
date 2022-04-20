@@ -1,0 +1,31 @@
+.modal-container {
+   width: 500px;
+}
+
+.modal-container,
+.ButtonPublicarModal,
+.ButtonQuitarPublicacion {
+   float: left;
+   position: relative;
+}
+
+.ButtonPublicarModal,
+.ButtonQuitarPublicacion {
+   cursor: pointer;
+   background-color: $green;
+   padding: 5px;
+   color: $white;
+   text-align: center;
+   border-radius: 5px;
+}
+
+.titleModalTrash {
+   font-size: 20px;
+   margin-top: 5px;
+}
+
+.textModalTrash {
+   font-size: 18px;
+   margin-top: 22px;
+   font-family: Arial, Helvetica, sans-serif;
+}

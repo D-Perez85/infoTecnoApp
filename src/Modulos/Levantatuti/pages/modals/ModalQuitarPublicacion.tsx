@@ -1,5 +1,4 @@
 import {Box, Modal} from '@mui/material'
-import '../../styles/modalPublicar.scss'
 import React from 'react'
 import {AiOutlineClose} from 'react-icons/ai'
 import {Inoticia} from '../../interfaces/noticias-interfaces'

@@ -1,0 +1,33 @@
+.modal-container{
+    width: 500px;
+    float: left;
+    position: relative;
+}
+.ButtonBajaNoticia{
+    background-color: $red;
+ }
+
+.ButtonAltaNoticia{
+    background-color:$green;
+ }
+
+.ButtonAltaNoticia, .ButtonBajaNoticia{
+    color: $white;        
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif; 
+    float: left; 
+    position: relative;
+    padding: 5px;
+    text-align: center;
+}
+
+.titleModal{
+    font-size: 20px;
+    margin-top: 5px;    
+}
+
+.textModal{
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif; 
+    margin-top: 22px
+}

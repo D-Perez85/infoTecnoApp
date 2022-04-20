@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {Inoticia} from '../../interfaces/noticias-interfaces'
-import '../../styles/modalSubirImagen.scss'
+// import '../../styles/modalSubirImagen.scss'
 import {postSubirImagen, crearNoticia, editarNoticias} from '../../servicios/Noticias-Services'
 
 //*Envio de imagenes a Api

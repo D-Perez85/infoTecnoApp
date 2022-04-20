@@ -1,0 +1,24 @@
+//Common Settings
+@import './base/settings'; 
+@import './base/base'; 
+
+//Components
+@import './components/app'; 
+@import './components/buttonTable'; 
+@import './components/form-inputs'; 
+@import './components//search-input'; 
+@import './components/noticias'; 
+@import './components/table'; 
+@import './components/pagination'; 
+
+//Modals
+@import './components/modalEstado'; 
+@import './components/modalInformacion'; 
+@import './components/modalPreview'; 
+@import './components/modalPublicar'; 
+@import './components/modalSubirImagen'; 
+
+
+
+
+

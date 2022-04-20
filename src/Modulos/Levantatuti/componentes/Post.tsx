@@ -1,7 +1,4 @@
-import React, {useEffect, useState} from 'react'
-import '../styles/buttonTable.scss'
-import '../styles/noticias.scss'
-import '../styles/table.scss'
+import React, {useEffect, useState} from 'react'; 
 import {
    FaRegThumbsDown,
    FaEdit,
@@ -102,7 +99,7 @@ const Posts: React.FC<statePost> = ({
    } //Loading de carga pagina principal
 
    return (
-      <div>
+      <div className='test'>
          <button
             className='buttonCreate'
             onClick={() => {
@@ -137,7 +134,7 @@ const Posts: React.FC<statePost> = ({
                <Table className='table'>
                   <TableHead className='table-head'>
                      <TableRow className='row-table'>
-                        <TableCell className='cell-table'>Titulo</TableCell>
+                        <TableCell className='cell-table '>Titulo</TableCell>
                         <TableCell className='cell-table'>
                            Fecha Creacion
                            <TableRow>
@@ -186,7 +183,7 @@ const Posts: React.FC<statePost> = ({
                                  {' '}
                                  {post.publicacion ? (
                                     <button
-                                       className='buttonPublicar tooltip-test'
+                                       className='buttonPublicar tooltip-test pointer'
                                        title='Quitar Publicacion'
                                        onClick={() => {
                                           setobjetQPub(post),
@@ -198,7 +195,7 @@ const Posts: React.FC<statePost> = ({
                                     </button>
                                  ) : (
                                     <button
-                                       className='buttonEdit tooltip-test'
+                                       className='buttonEdit tooltip-test pointer'
                                        title='Editar'
                                        onClick={() => {
                                           setfunctionModal(false),
@@ -211,7 +208,7 @@ const Posts: React.FC<statePost> = ({
                                  )}
                                  {post.estado ? (
                                     <button
-                                       className='buttonDelet tooltip-test'
+                                       className='buttonDelet tooltip-test pointer'
                                        title='Baja'
                                        onClick={() => {
                                           setobjetE(post),
@@ -223,7 +220,7 @@ const Posts: React.FC<statePost> = ({
                                     </button>
                                  ) : (
                                     <button
-                                       className='buttonAlta tooltip-test'
+                                       className='buttonAlta tooltip-test pointer'
                                        title='Alta'
                                        onClick={() => {
                                           setobjetE(post),
@@ -235,7 +232,7 @@ const Posts: React.FC<statePost> = ({
                                     </button>
                                  )}
                                  <button
-                                    className='buttonVew'
+                                    className='buttonVew pointer'
                                     onClick={() => {
                                        setobjetInfo(post), setmodelStateInfo(true)
                                     }}
@@ -243,14 +240,14 @@ const Posts: React.FC<statePost> = ({
                                     <FaInfo />
                                  </button>
                                  <button
-                                    className='buttonPublicar tooltip-test'
+                                    className='buttonPublicar tooltip-test pointer'
                                     title='SubirImagen'
                                  >
                                     <FaFileImage />
                                  </button>
                                  {post.publicacion ? (
                                     <button
-                                       className='buttonPublicar tooltip-test'
+                                       className='buttonPublicar tooltip-test pointer'
                                        title='Quitar Publicacion'
                                        onClick={() => {
                                           setobjetPub(post),
@@ -336,4 +333,4 @@ const Posts: React.FC<statePost> = ({
       </div>
    )
 }
-export default Posts
+export default Posts; 
