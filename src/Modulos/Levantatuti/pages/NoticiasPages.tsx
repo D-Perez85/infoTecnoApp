@@ -10,7 +10,10 @@ import Pagination from '../componentes/pagination'
 import Posts from '../componentes/Post'
 import {Breadcrumbs, Link} from '@material-ui/core'
 import moment from 'moment'
+
 moment.locale('es-mx')
+
+
 
 export default function NoticiasPages() {
    const [noticias, setNoticias] = useState<Inoticias>([])
@@ -46,6 +49,10 @@ export default function NoticiasPages() {
       filtrar(e.target.value)
    }
 
+/**
+ * @description Function que retorna un resultado, filtrando una tabla iterada de posts.
+ * @param terminoBusqueda es la referencia de busqueda, si al iterar esta en la lista la retorna y setea a noticias con el valor 
+ * */
    const filtrar = (terminoBusqueda: any) => {
       const resultadoBusqueda = tablaNoticias.filter((posts) => {
          if (posts.titulo.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())) {
@@ -55,12 +62,22 @@ export default function NoticiasPages() {
       setNoticias(resultadoBusqueda)
    }
 
-   const [BuscarFecha, setBusquedaFecha] = useState('')
+   const [BuscarFecha, setBusquedaFecha] = useState(''); 
+
+/**
+ * @description Function que retorna el set de un value, y hace el dispatch de buscarFechaCreacion, usando como args una constante formateada del value inciial.
+ * @param e.target.value es la referencia de busqueda y de seteo de la constante fecha. con moment se da formato a la fecha.
+ * */  
    const handleChangeFecha = (e: any) => {
       setBusquedaFecha(e.target.value)
       const fecha = moment(e.target.value).format('DD/MM/YYYY')
       buscarFechaCreacion(fecha)
    }
+
+/**
+ * @description Function async que hace el request de la fecha de creacion de una noticia
+ * @param noticia es la referencia de busqueda (args) y de seteo de la constante fechaCreacion =>  
+ * */ 
    const buscarFechaCreacion = async (noticia: string) => {
       const fechaCreacion = {
          fecha_creacion: noticia,
@@ -97,6 +114,7 @@ export default function NoticiasPages() {
       }
    } //Filtro CheckBox para noticias publicadas
 
+   
    return (
       <div className='container'>
          <div className='container'>

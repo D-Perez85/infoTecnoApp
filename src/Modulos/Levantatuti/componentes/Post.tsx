@@ -1,32 +1,16 @@
 import React, {useEffect, useState} from 'react'; 
-import {
-   FaRegThumbsDown,
-   FaEdit,
-   FaInfo,
-   FaCheck,
-   FaFileImage,
-   FaEye,
-   FaRegThumbsUp,
-} from 'react-icons/fa'
+import { FaRegThumbsDown, FaEdit, FaInfo, FaCheck, FaFileImage, FaEye, FaRegThumbsUp} from 'react-icons/fa'
 import {Inoticia, Inoticias} from '../interfaces/noticias-interfaces'
-import {
-   Table,
-   TableContainer,
-   TableHead,
-   TableRow,
-   TableCell,
-   TableBody,
-   FormControlLabel,
-   Checkbox,
-} from '@material-ui/core'
+import { Table, TableContainer, TableHead, TableRow, TableCell, TableBody, FormControlLabel, Checkbox} from '@material-ui/core'
 import ModalPublicacion from '../pages/modals/ModalPublicacion'
 import ModalEstado from '../pages/modals/ModalEstado'
 import ModalInformacion from '../pages/modals/ModalInfomacion'
 import {initialValues} from '../pages/modals/helpers-noticias'
-import {AiOutlineClose, AiOutlineSearch} from 'react-icons/ai'
+import {AiOutlineClose} from 'react-icons/ai'
 import BasicModal from '../pages/modals/ModalModificarCrear'
 import ModalPreview from '../pages/modals/ModalPreview'
 import ModalQuitarPublicacion from '../pages/modals/ModalQuitarPublicacion'
+import { ConteinerSearch } from './ConteinerSearch';
 
 type statePost = {
    posts?: Inoticias
@@ -99,35 +83,33 @@ const Posts: React.FC<statePost> = ({
    } //Loading de carga pagina principal
 
    return (
-      <div className='test'>
+      <div>
          <button
             className='buttonCreate'
             onClick={() => {
-               setfunctionModal(true), setobjet(initialValues), setmodelState(true)
-            }}
-         >
+               setfunctionModal(true), 
+               setobjet(initialValues), 
+               setmodelState(true)}}>
             Nueva Noticia
          </button>
 
-         <div className='conteinerSerch'>
-            <input
-               className='form-control inputSerch'
-               type='text'
-               placeholder='Buscar...'
-               value={busqueda}
-               onChange={handleChange}
-            />
-            <button className='buttonSearch'>
-               <AiOutlineSearch />
-            </button>
-         </div>
+
+
+
+
+
+
+
+
+
+         <ConteinerSearch busqueda={busqueda} handleChange={handleChange}/>
+
          <div className='Form-Control checknoticias'>
             <FormControlLabel
                value='end'
                control={<Checkbox value={checkedOne} onChange={handleChangeOne} />}
                label='Noticias publicadas'
-               labelPlacement='end'
-            />
+               labelPlacement='end'/>
          </div>
          <div className='Container-Table'>
             <TableContainer className='Table-Conteiner'>
@@ -162,7 +144,7 @@ const Posts: React.FC<statePost> = ({
                      </TableRow>
                   </TableHead>
                   <TableBody>
-                     {posts?.map((post: Inoticia) => {
+                     {posts?.map((post: Inoticia) => {                        
                         return (
                            <TableRow key={post._id}>
                               <TableCell className='cell-table text-titulo'>
@@ -186,7 +168,7 @@ const Posts: React.FC<statePost> = ({
                                        className='buttonPublicar tooltip-test pointer'
                                        title='Quitar Publicacion'
                                        onClick={() => {
-                                          setobjetQPub(post),
+                                             setobjetQPub(post),
                                              setmodelStateQP(true),
                                              setfunctionModalp(false)
                                        }}
@@ -198,7 +180,7 @@ const Posts: React.FC<statePost> = ({
                                        className='buttonEdit tooltip-test pointer'
                                        title='Editar'
                                        onClick={() => {
-                                          setfunctionModal(false),
+                                             setfunctionModal(false),
                                              setobjet(post),
                                              setmodelState(true)
                                        }}
@@ -211,7 +193,7 @@ const Posts: React.FC<statePost> = ({
                                        className='buttonDelet tooltip-test pointer'
                                        title='Baja'
                                        onClick={() => {
-                                          setobjetE(post),
+                                             setobjetE(post),
                                              setmodelStateE(true),
                                              setfunctionMdaleE(true)
                                        }}
@@ -223,7 +205,7 @@ const Posts: React.FC<statePost> = ({
                                        className='buttonAlta tooltip-test pointer'
                                        title='Alta'
                                        onClick={() => {
-                                          setobjetE(post),
+                                             setobjetE(post),
                                              setmodelStateE(true),
                                              setfunctionMdaleE(false)
                                        }}
@@ -250,7 +232,7 @@ const Posts: React.FC<statePost> = ({
                                        className='buttonPublicar tooltip-test pointer'
                                        title='Quitar Publicacion'
                                        onClick={() => {
-                                          setobjetPub(post),
+                                             setobjetPub(post),
                                              setmodelStateP(true),
                                              setfunctionModalp(false)
                                        }}
@@ -262,7 +244,7 @@ const Posts: React.FC<statePost> = ({
                                        className='buttonPublicar tooltip-test'
                                        title='Publicar'
                                        onClick={() => {
-                                          setobjetPub(post),
+                                             setobjetPub(post),
                                              setmodelStateP(true),
                                              setfunctionModalp(true)
                                        }}
@@ -274,7 +256,8 @@ const Posts: React.FC<statePost> = ({
                                     className='buttonPublicar tooltip-test'
                                     title='VistaPrevia'
                                     onClick={() => {
-                                       setobjetPreview(post), setmodelStatePreview(true)
+                                       setobjetPreview(post), 
+                                       setmodelStatePreview(true)
                                     }}
                                  >
                                     <FaEye />

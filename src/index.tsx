@@ -8,9 +8,12 @@ import NoticiasPages from './Modulos/Levantatuti/pages/NoticiasPages'
 import PrincipalPages_f from './Modulos/Telefonia/pages/PrincipalPages_f'
 import './Modulos/Levantatuti/styles/styles.scss'; 
 
+
+
+
 ReactDOM.render(
    <BrowserRouter>
-      <Routes>
+      <Routes>    
          <Route path='/' element={<App />} />
          <Route path='/noticias' element={<NoticiasPages />} />
          <Route path='/principalf' element={<PrincipalPages_f />} />
